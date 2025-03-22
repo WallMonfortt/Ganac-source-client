@@ -1,0 +1,88 @@
+@import url("../pages/about-us.css");
+@import url("../pages/annual-report.css");
+@import url("../pages/cancer.css");
+@import url("../components/carousel.css");
+@import url("../pages/donation-form.css");
+@import url("../components/footer.css");
+@import url("../components/header.css");
+@import url("../pages/how-to-help.css");
+@import url("../components/instagram-section.css");
+@import url("../utils/global-modal.css");
+
+:root {
+    --main-bg-color: #1D3E93;
+    --second-highlight-color: #0BB9CA;
+    --form-bg-color: #FFD200;
+    --action-btn-bg-color: #bf2286;
+    --modal-bg-color: rgb(163, 194, 204);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Nunito Sans", serif, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+}
+
+main {
+    height: 90vh;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-bg-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.floating-button svg {
+    width: 50px;
+    height: 50px;
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+}
+
+.mb-s {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,212 @@
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    min-height: 7%;
+    border-top: 2px solid var(--main-bg-color);
+    margin-top: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-main {
+    display: flex;
+    max-width: 85vw;
+    width: -webkit-fill-available;
+}
+
+.contact-main h2 {
+    font-size: 1.5rem;
+    color: var(--main-bg-color);
+    margin-bottom: 10px;
+}
+
+.certifications,
+.socials,
+.contact {
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+.certifications {
+    flex: 2;
+}
+
+.socials,
+.contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.socials {
+    padding: 0 15px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.social-icon-circle a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.social-icon-circle a svg {
+    max-width: 70%;
+    max-height: 80%;
+    fill: white;
+    margin: auto;
+}
+
+.social-icon-circle a:hover {
+    background-color: var(--action-btn-bg-color);
+}
+
+.certifications-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.cellphone {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p a {
+    text-decoration: none;
+    color: var(--action-btn-bg-color);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.cellphone>a {
+    display: flex;
+    align-items: center;
+}
+
+.cellphone>a>svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.certifications-logos img {
+    width: auto;
+    height: 60px;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.6s ease;
+}
+
+@media (max-width: 768px) {
+    .certifications-logos {
+        gap: 15px;
+    }
+
+    .certifications-logos img {
+        height: 40px;
+        max-width: 100px;
+    }
+
+    .socials{
+        border: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-main h2 {
+        font-size: .8rem;
+    }
+
+    .certifications-logos img {
+        height: 50px;
+    }
+
+    .social-icon-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icon-circle a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-main h2 {
+        font-size: .8rem;
+    }
+
+    .certifications-logos img {
+        height: 50px;
+    }
+
+    .social-icon-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icon-circle a {
+        width: 80%;
+        height: 80%;
+    }
+
+    .contact-info {
+        max-width: 90vw;
+        font-size: .6rem;
+    }
+
+    .contact-info p a {
+        font-size: .8rem;
+    }
+}

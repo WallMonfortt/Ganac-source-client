@@ -1,0 +1,146 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 90vh;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.control {
+  background-color: var(--main-bg-color);
+  opacity: 0.5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.control:hover {
+  opacity: 1;
+}
+
+#nextBtn {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#prevBtn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.home-title {
+  position: absolute;
+  top: 20vh;
+  left: 5vh;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  max-width: 80vw;
+  text-shadow:
+    -1px -1px 0px black,
+    1px -1px 0px black,
+    -1px 1px 0px black,
+    1px 1px 0px black;
+}
+
+.additional-buttons {
+  position: absolute;
+  left: 5vw;
+  display: block;
+  justify-content: center;
+}
+
+.extra-button {
+  background-color: var(--main-bg-color);
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  width: 19rem;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 15px 10px;
+  transition: background-color 0.3s;
+}
+
+.extra-button:first-child {
+  background-color: var(--action-btn-bg-color);
+}
+
+.extra-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.extra-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .home-title {
+    top: 10vh;
+    font-size: 2rem;
+  }
+
+  .additional-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 50vh;
+  }
+
+  .extra-button {
+    margin: 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .additional-buttons {
+    top: 60vh;
+  }
+
+  .extra-button {
+    padding: 20px 30px;
+  }
+}

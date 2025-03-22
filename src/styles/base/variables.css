@@ -1,0 +1,25 @@
+:root {
+    /* Colors */
+    --main-bg-color: #1D3E93;
+    --second-highlight-color: #0BB9CA;
+    --form-bg-color: #FFD200;
+    --action-btn-bg-color: #bf2286;
+    --modal-bg-color: rgb(163, 194, 204);
+    --hover-bg-color: #0056b3;
+
+    /* Typography */
+    --font-family-main: "Nunito Sans", serif, Arial, sans-serif;
+    
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    
+    /* Transitions */
+    --transition-speed-slow: 2s;
+    --transition-speed-medium: 1s;
+    --transition-timing-function: ease;
+    
+    /* Floating Button */
+    --floating-button-size: 100px;
+    --floating-button-icon-size: 50px;
+}

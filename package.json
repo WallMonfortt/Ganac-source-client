@@ -1,5 +1,5 @@
 {
-  "name": "ganac-source-client",
+  "name": "ganac-webpage",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.5.4"
+    "@astrojs/preact": "^4.0.4",
+    "@astrojs/vercel": "^8.0.7",
+    "astro": "^5.2.2",
+    "preact": "^10.25.4"
   }
 }

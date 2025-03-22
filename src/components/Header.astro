@@ -1,0 +1,17 @@
+---
+import Hamburguer from "./Hamburguer.astro";
+import Navbar from "./Navbar.astro"
+---
+
+<header>
+    <div class="img-container">
+        <img src="./LogoGanac.png" alt="logo_ganac" class="logo">
+    </div>
+    <div class="top-navbar">
+        <Navbar />
+    </div>
+    <Hamburguer />
+    <div class="side-navbar" id="sideNav">
+        <Navbar />
+    </div>
+</header>

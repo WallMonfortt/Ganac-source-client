@@ -1,0 +1,330 @@
+.donation-form {
+  position: fixed;
+  right: 0;
+  top: -150vh;
+  width: 100vw;
+  max-height: 100vh;
+  color: black;
+  transition: top 0.5s ease;
+  z-index: 1000;
+  border-radius: 0 0 0 20px;
+  background-color: var(--form-bg-color);
+}
+
+.donation-form.open {
+  top: 0;
+}
+
+fieldset {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.close-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.payment {
+  display: flex;
+  flex-flow: column;
+  padding: 0 1rem;
+}
+
+.payment label {
+  font-weight: bold;
+}
+
+.payment p {
+  font-size: .8rem;
+}
+
+.payment>div h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2em
+}
+
+.payment>div h1 span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: .2em;
+}
+
+.payment>div>img {
+  margin-top: .2em;
+}
+
+.input-text,
+.divider-input {
+  margin-top: .2em;
+}
+
+input {
+  margin-top: 0.1em;
+  width: 100%;
+  height: 3em;
+  border: 0;
+  border-radius: 5px;
+}
+
+.divider-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex: 1;
+}
+
+.input-group {
+  margin-right: 20px;
+}
+
+.input-group:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: .8rem;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+
+.wrap_buttons_pay {
+  text-align: center;
+}
+
+.angelMsg {
+  padding-top: 10px;
+}
+
+.wrap_buttons_pay .angelMsg h3 {
+  font-size: 1.5em;
+}
+
+.wrap_buttons_pay .cantidad {
+  display: flex;
+}
+
+.wrap_buttons_pay .cantidad button {
+  width: 100%;
+  padding: 0.3em;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.2em;
+}
+
+.wrap_buttons_pay .cantidad button.selected {
+  background-color: #212B59;
+  color: white;
+}
+
+.wrap_buttons_pay .cantidad button.first {
+  margin-left: 0em !important;
+}
+
+.wrap_buttons_pay .action_button {
+  margin-top: .2em;
+}
+
+.wrap_buttons_pay .action_button button {
+  font-size: 1em;
+  padding: .8em 0;
+  cursor: pointer;
+  margin-bottom: .5em;
+  width: 100%;
+  border: 0;
+  border-radius: 0.2em;
+  background-color: var(--action-btn-bg-color);
+  color: white;
+}
+
+.wrap_buttons_pay .action_button .flat {
+  background: var(--main-bg-color);
+  color: white;
+  text-decoration: underline;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--modal-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 50vw;
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+}
+
+.modal>img {
+  width: 20%;
+  margin-bottom: 15px;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.modal h2>span {
+  color: var(--action-btn-bg-color);
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal form {
+  text-align: start;
+  padding: 0 15%;
+}
+
+.modal input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+
+.city-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.field-group:last-child {
+  margin-right: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-buttons button[type="submit"] {
+  background: var(--action-btn-bg-color);
+  color: white;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background: #5568d4;
+}
+
+.modal-buttons button[type="button"] {
+  background: #ccc;
+  color: #333;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background: #bbb;
+}
+
+.error-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--main-bg-color);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 10px 0;
+  text-align: start;
+}
+
+.modal-content li {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  background-color: var(--modal-bg-color);
+}
+
+
+
+@media screen and (min-width: 780px) {
+  .donation-form {
+    width: auto;
+  }
+}

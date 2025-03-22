@@ -1,0 +1,212 @@
+---
+import Image from "astro/components/Image.astro";
+import AngelesLogo from "../assets/AngelesLogo.png";
+import bg from "../assets/bg.webp";
+import StJudes from "../assets/st-judes.webp";
+import transport1 from "../assets/TRANSPORTISTAS_1.png";
+import transport2 from "../assets/TRANSPORTISTAS_2.png";
+import transport3 from "../assets/TRANSPORTISTAS_3.png";
+import transport4 from "../assets/TRANSPORTISTAS_4.png";
+import Hps from "../assets/hps.jpg";
+
+const items = [
+  {
+    image: "/carrera_monterrey.webp",
+    title: "Carrera GANAC – TECNOLOGICO DE MONTERREY",
+    description:
+      "Las Carreras GANAC, en colaboración con el Tecnológico de Monterrey, son eventos deportivos con una misión significativa: apoyar a niños y jóvenes con cáncer. Reúnen a estudiantes y familias para promover la conciencia y recaudar fondos.",
+  },
+  {
+    image: "/radioton_guasave.webp",
+    title: "Carrera GANAC – COLEGIO GUASAVE",
+    description:
+      "Las Carreras GANAC, organizadas con el Colegio Guasave, son una oportunidad para unir fuerzas contra el cáncer infantil. Este evento convoca a la comunidad para generar conciencia y recolectar fondos que impacten positivamente.",
+  },
+  {
+    image: "/radioton_maxiradio.jpg",
+    title: "RADIOTÓN GANAC – MAXIRADIO 103.3 FM",
+    description:
+      "El Radiotón GANAC, en asociación con Maxiradio 103.3 FM, es un evento especial que busca recaudar fondos y concienciar sobre el cáncer infantil. Con transmisiones en vivo, la comunidad se une en una jornada de solidaridad, donde cada donación mejora la vida de los niños en tratamiento.",
+  },
+  {
+    image: "/radioton_exa.webp",
+    title: "RADIOTÓN GANAC – EXA 98.1 FM",
+    description:
+      "El Radiotón GANAC, junto a EXA 98.1 FM, se convierte en una plataforma para recaudar fondos y crear conciencia sobre el cáncer infantil. A través de transmisiones en vivo, invitamos a la comunidad a participar, donde cada donación marca la diferencia en la vida de jóvenes en tratamiento.",
+  },
+  {
+    image: "/carrera_banderas.webp",
+    title:
+      "Carrera de las Banderas dentro del marco del maratón internacional de Culiacán.",
+    description:
+      "Evento especial, donde empresas se suman a la causa portando banderas en apoyo a niños y jóvenes con cáncer.",
+  },
+];
+---
+
+<section id="comoAyudar" class="fade-in">
+  <div class="main-banner">
+    <Image src={bg} alt="Image background" />
+    <Image src={AngelesLogo} alt="Angeles" class="angel-logo" loading="lazy" />
+  </div>
+
+  <div class="container">
+    <div class="title-section">
+      <p>
+        Un <b>ángel de esperanza</b> es una persona que, de manera automática y mensual,
+        contribuye a nuestra institución a través de donaciones con tarjeta de crédito
+        o débito. Gracias a su generosidad, estamos un paso más cerca de ayudar a
+        todos nuestros niños y jóvenes en su lucha contra el cáncer.
+      </p>
+    </div>
+    <div class="content-section">
+      {
+        items.map((item, index) => (
+          <div class="element">
+            {index % 2 === 0 ? (
+              <>
+                <img src={item.image} alt={item.title} />
+                <div class="text">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div class="text">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+                <img src={item.image} alt={item.title} />
+              </>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="alliances">
+      <div class="alliance-container">
+        <h3>ALIANZAS:</h3>
+        <div class="alliance-content">
+          <div class="alliance-element">
+            <div class="alliance-info">
+              <p>
+                Desde el año 2000 a la fecha se realiza un convenio entre St.
+                Jude-HPS-GANAC para la recepción de apoyo de capacitación de
+                médicos y enfermeras.
+              </p>
+            </div>
+            <div class="alliance-logos">
+              <div class="alliance-logo">
+                <Image src={StJudes} alt="logo DIF" />
+              </div>
+              <div class="alliance-logo">
+                <Image src={Hps} alt="logo Hospital Pediatrico de Sinaloa" />
+              </div>
+            </div>
+          </div>
+          <div class="alliance-element">
+            <div class="alliance-logos">
+              <div class="alliance-logo">
+                <Image src={transport1} alt="logo Transportistas" />
+              </div>
+              <div class="alliance-logo">
+                <Image src={transport2} alt="logo Transportistas" />
+              </div>
+              <div class="alliance-logo">
+                <Image src={transport4} alt="logo Transportistas" />
+              </div>
+              <div class="alliance-logo">
+                <Image src={transport3} alt="logo Transportistas" />
+              </div>
+            </div>
+            <div class="alliance-info">
+              <p>
+                Desde 2016 nuestros beneficiarios y un familiar, son
+                transportados gratuitamente desde sus hogares a recibir sus
+                consultas y tratamientos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .alliance-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .alliance-info {
+        flex: 1;
+        max-width: 50%;
+        text-align: left;
+        padding: 0 15px;
+      }
+
+      .alliance-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        /* max-width: 50%; */
+      }
+
+      .alliance-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        max-width: 200px;
+        max-height: 150px;
+      }
+
+      /* .alliance-logos .alliance-logo:nth-child(2) {
+        transform: translateY(20px);
+      } */
+
+      .alliance-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        .alliance-element {
+          flex-direction: column;
+        }
+
+        .alliance-info {
+          text-align: center;
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
+
+        .alliance-logos {
+          max-width: 100%;
+        }
+
+        /* .alliance-logos .alliance-logo:nth-child(2) {
+          transform: translateY(0);
+        } */
+      }
+    </style>
+
+    <div class="volunteering">
+      <h3>VOLUNTARIADO:</h3>
+      <p>
+        Tú puedes ser parte de los amigos de GANAC en nuestras campañas de
+        Boteo, Ganac me Acompaña, entre otros.
+      </p>
+      <a href="#contacto"><b>¡Ponte en contácto con nosotros!</b></a>
+    </div>
+  </div>
+</section>

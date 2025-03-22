@@ -1,0 +1,118 @@
+#instagram-section {
+    height: auto;
+}
+
+.instagram-container {
+    max-width: 95vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--main-bg-color);
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.instagram-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-card:hover {
+    transform: scale(1.05);
+}
+
+.instagram-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.instagram-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 1000px;
+}
+
+.instagram-embed blockquote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-embed blockquote.instagram-media {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.instagram-embed iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+.instagram-cta {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.instagram-cta .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .instagram-embed {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .instagram-embed {
+        height: 250px;
+    }
+}

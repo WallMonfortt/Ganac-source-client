@@ -1,0 +1,171 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/base/global.css";
+
+export interface Props {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    ogImage?: string;
+}
+
+const { 
+    title = "GANAC", 
+    description = "GANAC es una asociación benéfica dedicada a apoyar a niños y jóvenes afectados por el cáncer. Proporcionamos medicamentos, transporte y apoyo emocional a quienes más lo necesitan. Únete a nuestra causa y ayúdanos a hacer la diferencia en la vida de estos valientes guerreros.", 
+    keywords = [
+    "Asociación contra el cáncer",
+    "Apoyo a niños con cáncer",
+    "Ganac",
+    "Medicamentos para niños con cáncer",
+    "Transporte para pacientes oncológicos",
+    "Apoyo emocional cáncer",
+    "Ayuda a jóvenes con cáncer",
+    "Donaciones para combatir el cáncer",
+    "Voluntariado contra el cáncer",
+    "Cuidado infantil oncológico",
+    "GANAC"],
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- SEO Meta Tags -->
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(", ")} />
+        <link rel="canonical" href={Astro.site} />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.site} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@GANAC_org" />
+        <meta property="twitter:creator" content="@GANAC_org" />
+        <meta property="twitter:title" content="GANAC - Apoyo a Niños con Cáncer" />
+        <meta property="twitter:description" content="Organización dedicada a apoyar a niños con cáncer, brindando esperanza y recursos." />
+        <meta property="twitter:image" content="/LogoGanac.png" />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/LogoGanac.png" />
+        <link rel="apple-touch-icon" href="/LogoGanac.png" />
+        
+        <!-- Performance Optimization -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Delius&family=Give+You+Glory&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
+        
+        <script is:inline>
+            (function() {
+                function removeOpenPayIframes() {
+                    const openPayIframes = document.querySelectorAll('iframe[id^="_op_data"]');
+                    
+                    openPayIframes.forEach((iframe, index) => {
+                        iframe.style.cssText = `
+                            position: absolute !important;
+                            top: -9999px !important;
+                            left: -9999px !important;
+                            width: 0 !important;
+                            height: 0 !important;
+                            opacity: 0 !important;
+                            visibility: hidden !important;
+                            pointer-events: none !important;
+                            border: none !important;
+                            margin: 0 !important;
+                            padding: 0 !important;
+                            z-index: -1 !important;
+                            display: block !important;
+                        `;
+
+                        iframe.setAttribute('aria-hidden', 'true');
+                    });
+
+                    // Ensure no extra body space
+                    if (document.body) {
+                        document.body.style.cssText = `
+                            margin: 0 !important;
+                            padding: 0 !important;
+                            overflow-x: hidden !important;
+                            max-width: 100vw !important;
+                            position: relative !important;
+                        `;
+                    }
+                }
+
+                // Multiple strategies for iframe removal
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', removeOpenPayIframes);
+                } else {
+                    removeOpenPayIframes();
+                }
+
+                // Fallback mechanisms
+                window.addEventListener('load', removeOpenPayIframes);
+                setTimeout(removeOpenPayIframes, 500);
+                setTimeout(removeOpenPayIframes, 1500);
+
+                // Soft periodic check with reduced frequency
+                const intervalId = setInterval(removeOpenPayIframes, 3000);
+
+                // Optional: Provide a way to stop checking if needed
+                window.stopOpenPayIframeCheck = () => {
+                    clearInterval(intervalId);
+                };
+            })();
+        </script>
+        
+        <meta property="og:title" content="GANAC - Apoyo a Niños con Cáncer" />
+        <meta property="og:description" content="Organización dedicada a apoyar a niños con cáncer, brindando esperanza y recursos." />
+        <meta property="og:type" content="nonprofit" />
+        <meta property="og:url" content={Astro.site} />
+        <meta property="og:image" content="/LogoGanac.png" />
+        <meta property="og:site_name" content="ganac.iap" />
+        <meta property="og:locale" content="es_MX" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ganac_iap" />
+        <meta name="twitter:creator" content="@ganac_iap" />
+        <meta name="twitter:title" content="GANAC - Apoyo a Niños con Cáncer" />
+        <meta name="twitter:description" content="Organización dedicada a apoyar a niños con cáncer, brindando esperanza y recursos." />
+        <meta name="twitter:image" content="/LogoGanac.png" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={Astro.site} />
+        <meta name="keywords" content="GANAC, niños con cáncer, donaciones, apoyo médico, fundación" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#1D3E93" />
+       
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GANAC",
+            "description": "GANAC: Innovative Solutions for Modern Challenges",
+            "logo": "/LogoGanac.png",
+            "url": Astro.site
+        }
+        </script>
+    </head>
+    
+    <body>
+        <Header />
+        <slot />
+        
+        <script>
+            import "../scripts/index.js";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,281 @@
+#nosotros{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about-title{
+  width: 100vw;
+  height: 35%;
+  padding-top: 1.5%;
+  justify-items: center;
+}
+
+.main-text{
+    padding: 20px;
+    font-size: 1rem;
+    max-width: 85vw;
+    align-self: center;
+    border-radius: 5px;
+    align-content: center;
+}
+
+.main-text h2{
+    color: var(--main-bg-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.main-text p{
+    font-size: .8rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.us-container{
+    height: 100%;
+}
+
+.tabs {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 90%;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 1%;
+}
+
+.tab-card {
+  width: 15%;
+  height: 90%;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.tab-card.active .tab-card-inner {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.tab-card.active.first .tab-card-inner {
+ transform: rotateY(-180deg) translateX(-10vw);
+}
+
+.tab-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.tab-card-front {
+  border: none;
+  justify-items: center !important;
+  align-content: center;
+  text-align: -webkit-center;
+}
+
+.tab-icon-circle {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg-color); 
+}
+
+.tab-name {
+  margin-top: 5px; 
+  color: var(--main-bg-color);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tab-card-front, .tab-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+}
+
+.tab-card-back {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg-color);
+  border-radius: 10px; 
+  transform: rotateY(180deg); 
+  width: 20vw;
+  overflow: hidden;
+  word-break: break-word;;
+}
+
+.tab-content {
+  max-width: 90%;
+  text-align: center;
+  color: white; 
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .background-image{
+    margin-bottom: 10px;
+  }
+  
+  .main-text {
+      height: 100%;
+      max-width: 90vw; 
+      padding: 10px;
+      font-size: 0.8rem; 
+  }
+
+  .main-text h2{
+    font-size: 1rem;
+  }
+
+  .tabs {
+      flex-direction: row;
+      align-content: normal;
+  }
+
+  .tab-cards{
+    align-content: normal;
+  }
+
+  .active.first{
+    transform: translateX(-9vw)
+  }
+
+  .tab-card {
+      width: 100vw;
+      height: auto;
+      max-height: 100vh;
+  }
+
+  .tab-icon-circle {
+      width: 80px; 
+      height: 80px; 
+      transition: none
+  }
+
+  .tab-name {
+     display: none;
+  }
+
+  .tab-content {
+      font-size: 0.8rem;
+      align-self: start;
+      align-content: center;
+      height: 100%;
+  }
+
+   .tab-card-back{
+    width: 100vw;
+    transform: rotateY(-180deg) translateX(0vw);
+   }
+}
+
+@media (max-width: 768px) {
+    .tab-card-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tab-icon-circle {
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    .tab-card-back {
+        width: 100vw;
+        height: auto;
+        min-height: fit-content;
+        padding: 15px;
+        box-sizing: border-box;
+        transform: translateY(-8vh) rotateY(180deg);
+    }
+
+    .tab-content {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tab-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .tab-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .tab-icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+
+  .main-text{
+    height: 30vh;
+    font-size: 2rem;
+  }
+
+  .main-text h2{
+    font-size: 3rem;
+  }
+
+  .main-text p{
+    font-size: 1.5rem;
+  }
+
+  .tab-content{
+    font-size: 1rem;
+  }
+
+  .tab-name{
+    font-size: 1.5rem;
+  }
+}

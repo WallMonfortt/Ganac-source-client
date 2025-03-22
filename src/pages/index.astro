@@ -1,16 +1,35 @@
 ---
-
+import AboutUs from "../components/AboutUs.astro";
+import AnnualReport from "../components/AnnualReport.astro";
+import CancerInfo from "../components/CancerInfo.astro";
+import Carousel from "../components/Carousel.astro";
+import DonationForm from "../components/DonationForm.jsx";
+import FloatButton from "../components/FloatButton.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import HowToHelp from "../components/HowToHelp.astro";
+import InstagramFeedContainer from "../components/InstagramFeedContainer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <main>
+        <Carousel />
+
+        <AboutUs />
+        
+        <CancerInfo />
+
+        <HowToHelp />
+
+        <AnnualReport />
+        
+        <InstagramFeedContainer />
+        
+        <Footer />
+
+        <FloatButton />
+        
+        <DonationForm client:load />
+    </main>
+
+</Layout>

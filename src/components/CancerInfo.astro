@@ -1,0 +1,49 @@
+---
+import RotatingImage from "../components/cancer-elements/RotatingImage.jsx";
+import InfoCard from "../components/cancer-elements/InfoCard.jsx";
+import Gallery from "../components/cancer-elements/Gallery.jsx";
+
+const content = [{
+    title: "Tipos más comunes de cáncer:",
+    body: [
+        "1. Leucemia",
+        "2. Linfomas",
+        "3. Tumor cerebral",
+        "4. Tumor óseo",
+        "5. Tumor abdominal",
+    ],
+}, {
+    title: "¿El cáncer puede ser curable?",
+    body: [
+        "Sí, concientizar a la población sobre los principales síntomas del cáncer infantil permite una detección oportuna para llevar a cabo un tratamiento adecuado."
+    ],
+}];
+---
+
+<section id="cancerInfantil" class="fade-in">
+    <div class="cancer-tarjeta-container">
+        <div>
+            <h2>¿Qué es el cáncer?</h2>
+            <p>
+                El cáncer comienza cuando las células de alguna parte del cuerpo
+                comienzan a crecer sin control y se dividen, formando nuevas células cancerosas que generan tumores, los cuales destruyen las células sanas y dañan tejidos del cuerpo.
+            </p>
+        </div>
+
+        <Gallery client:load />
+
+        <div class="info-container">
+            {content.map(el => {
+                return <InfoCard content={el} client:load />
+            })}
+        </div>
+        <p class="last-text">
+            En México se estima que anualmente se detectan 6 mil casos nuevos de
+            cáncer infantil, y es la 2da causa de muerte en niños de 4 a 15
+            años. La supervivencia en México es de 57% la cual se ve impactada
+            si se detecta a tiempo y puede incrementar hasta el 90% como en
+            países desarrollados. Gracias a la detección oportuna, la tasa de
+            supervivencia en el Hospital Pediátrico de Sinaloa es de 72%.
+        </p>
+    </div>
+</section>

@@ -1,0 +1,143 @@
+header {
+    align-items: center;
+    background: var(--main-bg-color) ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100vw;
+    height: 10vh;
+}
+
+.img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.logo{
+    filter: drop-shadow(1px 0 0 white)
+    drop-shadow(.5px 1px .5px white)
+    drop-shadow(-1px 0 .5px white)
+    drop-shadow(0 -1px 0 white);
+    max-height: 8vh;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    max-width: 80vw;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+/* Estilos para la barra lateral */
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: -35vw;
+    width: 35vw;
+    height: 100vh;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000; 
+    padding: 20px 0;
+    background-color: var(--main-bg-color);
+}
+
+.side-navbar.open{
+    left: 0;
+}
+
+.side-navbar nav ul {
+    list-style: none;
+    padding: 20px;
+    display: block;
+}
+
+.side-navbar nav ul li {
+    margin: 20px 0;
+}
+
+.side-navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: none;
+}
+
+nav ul li a.selected{
+    text-decoration: underline;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: relative;
+    width: 40px; 
+    height: 30px; 
+}
+
+.hamburger .line {
+    display: block;
+    height: 5px; 
+    margin-bottom: 10px; 
+    background-color: var(--second-highlight-color); 
+    transition: all 0.3s ease; 
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(0, 1.3rem);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -1.3rem); 
+}
+
+@media screen and (min-width: 1500px) {
+    .logo{
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+
+    nav ul li{
+        align-content: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    .side-navbar{
+        display: none;
+    
+    }
+
+    .hamburger{
+        display: none;
+    }
+}
